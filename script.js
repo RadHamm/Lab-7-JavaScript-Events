@@ -30,3 +30,14 @@ simpleForm.addEventListener('submit', (event) => {
   formMessage.textContent = 'Form submitted successfully!';
 });
 
+// Focus and Blur Event; message changes whether input field focused or not
+const focusInput = document.getElementById('focusInput');
+const focusMessage = document.getElementById('focusMessage');
+
+focusInput.addEventListener('focus', () => {
+  focusMessage.textContent = 'Input field has gained focus!';
+});
+
+focusInput.addEventListener('blur', () => {
+  focusMessage.textContent = 'Input field has lost focus!';
+});
