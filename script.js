@@ -41,3 +41,13 @@ focusInput.addEventListener('focus', () => {
 focusInput.addEventListener('blur', () => {
   focusMessage.textContent = 'Input field has lost focus!';
 });
+
+// Event Delegation; Click a button to receive unique message based on button click
+const buttonContainer = document.getElementById('buttonContainer');
+const delegationMessage = document.getElementById('delegationMessage');
+
+buttonContainer.addEventListener('click', (event) => {
+  if (event.target && event.target.classList.contains('eventBtn')) {
+    delegationMessage.textContent = `You clicked: ${event.target.textContent} Congratulations!`;
+  }
+});
