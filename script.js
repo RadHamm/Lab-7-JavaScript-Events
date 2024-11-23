@@ -11,3 +11,10 @@ hoverBtn.addEventListener('mouseleave', () => {
 
 });
 
+const Keyboard = document.getElementById('Keyboard');
+const keyMessage = document.getElementById('keyMessage');
+
+Keyboard.addEventListener('keydown', (event) => {
+    keyMessage.textContent = `Last key pressed: ${event.key}`;
+});
+
